@@ -1,0 +1,24 @@
+% This is a sample Matlab/Octave program which reconstructs an image sampled compressively 
+% with binarized or continuous DCT functions using the FDRI method.
+% 
+% This code is part of the FDRI package
+% https://www.igf.fuw.edu.pl/fdri
+% Copyright (C) 2018/2019 K. M. Czajkowski, A. Pastuszczak and R. Kotyński
+%
+
+
+FDRI version history
+
+1. v1.0, Aug 2018
+ - initial release
+
+2. v1.1, Feb 11, 2019
+ - corrected svd-based calculation of pseudoinverse in the presence of very small eigenvalues (fdri.m)
+ - rearanged folders 
+ - changes in the example_fdri:  more test images are included, psnr is calculated, by default the bases functions are chosen deterministically (this improves PSNR by approx. 2 dB)
+
+3. v1.2, Feb 14, 2019
+  - added example 2 (example2_fdri_wh.m) with Walsh-Hadamard sampling and FDRI reconstruction
+  - added example 3 (example3_fdri_morlet.m) with sampling based on binary or continuous Morlet wavelets convolved with white noise and with FDRI reconstruction
+  - examples of sampling functions are also plotted (PlotSamplingFunctionExamples.m)
+

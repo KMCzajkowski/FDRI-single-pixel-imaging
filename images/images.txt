@@ -1,0 +1,3 @@
+This is the default image directory
+
+You are encouraged to put an image database in this folder (1.gif, 2. gif,.. N.gif, such as eg.  http://decsai.ugr.es/cvg/CG/base.htm which we have used) - see and modify AvgDCTSpectrum.m
