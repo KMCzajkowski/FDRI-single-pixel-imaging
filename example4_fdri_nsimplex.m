@@ -26,7 +26,7 @@
 %
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
-function example4_fdri_nsimplex
+%function example4_fdri_nsimplex
 if exist ('OCTAVE_VERSION', 'builtin')
     pkg load image
     pkg load signal
@@ -74,7 +74,7 @@ if binarize
     % diffusion algorithm. Binarization uses parallel for loops if parallel
     % computing toolbox is available.
     fprintf('5. Dithering of sampling functions and preparing a resized version of the dithered matrix\n')
-    M_enc=DitherMeasurementMatrix(M_enc,dim1,dim2);
+    M_encb=DitherMeasurementMatrix(M_enc,dim1,dim2);
     M_enc_small=Downsize(M_enc);
     % Then, FDRI is calculated on a downscaled version of the sampling
     % matrix
@@ -121,4 +121,4 @@ if savematrix.flag
     fprintf('\nSaving the measurement matrix...\n');
     SaveSamplingMatrix(M_enc,savematrix.filename)
 end
-end
+%end
