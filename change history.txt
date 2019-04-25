@@ -22,3 +22,10 @@ FDRI version history
   - added example 3 (example3_fdri_morlet.m) with sampling based on binary or continuous Morlet wavelets convolved with white noise and with FDRI reconstruction
   - examples of sampling functions are also plotted (PlotSamplingFunctionExamples.m)
 
+4. v1.3 Apr 19, 2019
+  - added example 4 (example4_fdri_nsimplex.m) with DCT sampling coded on n-simplex
+  - wrapped reconstruction plotting, printing of simulation information and image loading into separate functions
+  - added dithering of sampling functions upscaled to a desired sized and calculation of downscaled sampling matrix (DitherMeasurementMatrix and Downsize functions)
+  - added utility for saving sampling functions
+  - code is now available at https://github.com/KMCzajkowski/FDRI-single-pixel-imaging
+

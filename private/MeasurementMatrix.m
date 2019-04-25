@@ -30,6 +30,9 @@ P=P(SM);
 if nargin<3
   invtransform=@(v)idct2(v);
 end
+if nargin<2
+    binarize=false;
+end
 
 
 if exist ('OCTAVE_VERSION', 'builtin')

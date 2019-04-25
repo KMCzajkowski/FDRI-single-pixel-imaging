@@ -41,9 +41,9 @@ function [P]=fdri(M,Nx,Ny,mi,ep,method)
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-if nargin<6,method=0;end;
-if nargin<5,ep=1e-5;end;
-if nargin<4,mi=0.5;end;
+if nargin<6,method=0;end
+if nargin<5,ep=1e-5;end
+if nargin<4,mi=0.5;end
 
 k=numel(M)/Nx/Ny;
 M=reshape(M,[k,Nx*Ny]);
@@ -73,7 +73,6 @@ a=real(FILT_R(M));
 switch method
     case 1 % calculate the inversion matrix with Eq. (8)
         P=real(FILT_L(pinv(a)));
-   
     case 2 %use svd to calculate the pseudoinverse, and then use Eq. (8):
         [U, S, V] = svd (a,'econ'); %a = U*S*V'
         tol=1e-5;
@@ -82,7 +81,6 @@ switch method
         INV_S=1./S;
         INV_S(isnan(INV_S))=0;
         P=real(FILT_L(V*diag(INV_S)*U'));
-        
     otherwise % calculate the inversion matrix with Eq. (7) - default
         P=real(FILT_L(a'*(inv(a*a'))));
 end

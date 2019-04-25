@@ -48,3 +48,15 @@ catch
   end
 end
 end
+function y=imresize(x,dim)
+dim0=size(x);
+x0=linspace(-1,1,dim0(2));
+y0=linspace(-1,1,dim0(1));
+[X0 Y0]=meshgrid(x0,y0);
+
+x0=linspace(-1,1,dim(2));
+y0=linspace(-1,1,dim(1));
+[X Y]=meshgrid(x0,y0);
+
+y=interp2(X0,Y0,x,X,Y);
+end
