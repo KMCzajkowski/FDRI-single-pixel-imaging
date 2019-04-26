@@ -1,8 +1,7 @@
 % This is a sample Matlab/Octave program which reconstructs an image measured compressively
 % with binarized or continuous DCT functions. The sampling functions are
 % distributed over simplex vertices. This enables to reduce impact of
-% experimental noise on the reconstruction and remove constant bias from
-% the measurements.
+% experimental 
 %
 % Krzysztof M. Czajkowski, Anna Pastuszczak, and Rafał Kotyński
 % "Single-pixel imaging with sampling distributed over simplex vertices ,"
@@ -48,7 +47,7 @@ close all
 fprintf('Fourier Domain Regularized Inversion (FDRI) example:\n')
 N=256;  % all images will be resized to NxN pixels
 k=1966; % number of basis functions (the compression ratio is equal to k/N^2)
-p=10; % word size (p-before coding, p+1 - after coding)
+p=3; % word size (p-before coding, p+1 - after coding)
 dim2=[1024 768]; % DMD dimensions
 mi=0.5; % FDRI parameters mi,eps (Eq. 11)
 ep=1e-5;
@@ -118,8 +117,8 @@ for testnr=1:length(tst_images)
     x0=P*y;
     t=toc;
     x0=double(reshape(x0,dim1));
-    %PSNR=psnr(x0,xorig,max(xorig(:)));
-    ShowReconstruction(testnr,0,t,xorig,SM,x0,y,k,N,mi)
+    PSNR=psnr(x0,xorig,max(xorig(:)));
+    ShowReconstruction(testnr,PSNR,t,xorig,SM,x0,y,k,N,mi)
 end
 fprintf('\nPlot some examples of sampling functions included in the measurement matrix...\n');
 if binarize

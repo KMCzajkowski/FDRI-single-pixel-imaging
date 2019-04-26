@@ -21,7 +21,7 @@
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 function img=dither(img)
-img=img/255;
+%img=img/255;
 Nx=size(img,1);
 Ny=size(img,2);
 

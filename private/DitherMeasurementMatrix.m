@@ -44,7 +44,7 @@ parfor i=1:N
         h=h/mean(h(:))*0.5;
         h(h>1)=1;
     end
-    test0=myinterp2(255*h,dim2);
+    test0=myinterp2(h,dim2);
     %tic
     h0=dither(test0);
     %toc
