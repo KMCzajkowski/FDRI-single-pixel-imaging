@@ -118,8 +118,8 @@ for testnr=1:length(tst_images)
     x0=P*y;
     t=toc;
     x0=double(reshape(x0,dim1));
-    %PSNR=psnr(x0,xorig,max(xorig(:)));
-    ShowReconstruction(testnr,0,t,xorig,SM,x0,y,k,N,mi)
+    PSNR=psnr(x0,xorig,max(xorig(:)));
+    ShowReconstruction(testnr,PSNR,t,xorig,SM,x0,y,k,N,mi)
 end
 fprintf('\nPlot some examples of sampling functions included in the measurement matrix...\n');
 if binarize
